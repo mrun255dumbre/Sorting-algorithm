@@ -39,3 +39,9 @@ do
 done
 
 echo "Ascending : " ${array[@]}
+
+echo "Desending order : "
+for (( z=$(( $n -1 )); z>=0; z--))
+do
+        echo ${array[z]}
+done
