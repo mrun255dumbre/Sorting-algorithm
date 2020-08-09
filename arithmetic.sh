@@ -22,3 +22,20 @@ do
         ((counter++))
 done
 echo "Array : " ${array[@]}
+
+n=${#array[@]}
+for (( i=0; i<$n; i++ ))
+do
+        k=$(($i+1));
+        for (( j=$k; j<$n; ++j ))
+        do
+                if [[ ${array[$i]} -gt ${array[$j]} ]]
+                then
+                        temp=${array[$i]}
+                        array[$i]=${array[$j]}
+                        array[$j]=$temp
+                fi
+        done
+done
+
+echo "Ascending : " ${array[@]}
