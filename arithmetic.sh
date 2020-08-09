@@ -8,3 +8,4 @@ declare -A dict
 compute_1=$(( $a + $b * $c ))
 compute_2=$(( $a * $b + $c ))
 compute_3=$(( $c + $a / $b ))
+compute_4=$(( $a % $b + $c ))
